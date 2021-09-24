@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,700&display=swap");
+
+:root {
+  --bg-color: #141c2f;
+  --text-color: hsl(0, 0%, 100%);
+  --card-color: hsl(224, 40%, 20%);
+  --stats-color: hsl(222, 40%, 13%);
+  --social-color: hsl(0, 0%, 100%);
+}
+
+html[data-theme="light"] {
+  --bg-color: hsl(222, 100%, 98%);
+  --text-color: rgb(14, 14, 14);
+  --card-color: hsl(0, 0%, 100%);
+  --stats-color: hsl(0, 0%, 95%);
+  --social-color: hsl(228, 23%, 30%);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 550ms ease-in-out !important;
+  transition-delay: 0 !important;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  max-width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+}
+
+.main {
+  width: 55%;
+  height: 55%;
+  margin-top: 10vh;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.headerName {
+  text-transform: capitalize;
+}
+
+.theme-changer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.theme-changer i {
+  margin: 0 0.5rem;
+}
+
+.searchBar {
+  background: var(--card-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.left-search input {
+  padding: 0.2rem 0.8rem;
+  font-size: 1.3rem;
+  color: #fff;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.left-search i {
+  font-size: 1.5rem;
+  color: hsl(215, 55%, 45%);
+  margin: 0 0.4rem;
+}
+
+.btn {
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  background: #177ce7;
+  cursor: pointer;
+}
+
+.description {
+  background-color: var(--card-color);
+  margin-top: 1rem;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  column-gap: 1.5rem;
+  padding: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.avtar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userPic {
+  width: 8rem;
+  border-radius: 50%;
+}
+
+.user-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-handle a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: hsl(215, 71%, 58%);
+}
+
+.user-handle {
+  display: flex;
+  flex-direction: column;
+}
+
+#bio {
+  grid-column: 2;
+}
+
+#bio p {
+  margin: 1rem 0;
+  font-weight: 900;
+}
+
+.stats {
+  background-color: var(--stats-color);
+  display: grid;
+  grid-row: 3;
+  grid-column: 2;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+}
+
+.stats p {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.social-info {
+  display: grid;
+  grid-column: 2;
+  grid-row: 4;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  color: var(--social-color);
+}
+
+.social-info i {
+  margin-right: 20px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.null_value {
+  color: #595d66;
+}
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 1025px) and (min-width: 376px) {
+  .main {
+    width: 65%;
+    height: 50%;
+  }
+
+  #bio {
+    grid-column: 1 / span 2;
+  }
+
+  .stats {
+    grid-column: 1 / span 2;
+  }
+
+  .social-info {
+    grid-column: 1 / span 2;
+  }
+
+  .user-info {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  html {
+    font-size: 70%;
+  }
+
+  .main {
+    width: 90%;
+    height: 48%;
+    margin-top: 15vh;
+  }
+
+  .description {
+    grid-template-columns: 70px 1fr;
+  }
+
+  #bio {
+    grid-column: 1 / span 2;
+  }
+
+  .userPic {
+    width: 6rem;
+  }
+
+  .user-info {
+    justify-content: space-around;
+  }
+
+  .stats {
+    grid-column: 1 / span 2;
+    text-align: center;
+    grid-gap: 12px;
+    padding: 1rem;
+  }
+
+  .social-info {
+    grid-column: 1 / span 2;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

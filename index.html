@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="github.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dev Finder</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="heading">
+            <h1>devfinder</h1>
+            <div class="theme-changer">
+                <h3>LIGHT</h3>
+                <i class="fas fa-sun"></i>
+            </div>
+        </div>
+        <div class="searchBar">
+            <div class="left-search">
+                <i class="fas fa-search"></i>
+                <input type="text" class="username" placeholder="Search Github Username...">
+            </div>
+            <button type="submit" class="btn">Search</button>
+        </div>
+        <div class="description">
+            <!-- Avtar -->
+            <div class="avtar">
+                <img class="userPic" src="https://source.unsplash.com/150x150/?person" alt="user_pic">
+            </div>
+            <!-- info -->
+            <div class="profile">
+                <div class="user-handle">
+                    <h1 class="headerName">The Unknown</h1>
+                    <a class="github_link" href="https://github.com/" target="blank">@unknown</a>
+                </div>
+                <h4 class="joinedDate">Joined 07 Aug 2008</h4>
+            </div>
+            <!-- bio -->
+            <div class="null_value" id="bio">
+                <p>This profile has no bio</p>
+            </div>
+            <!-- stats -->
+            <div class="stats">
+                <div class="repo">
+                    <h3>Repos</h3>
+                    <p class="repo_count">42</p>
+                </div>
+                <div class="followers">
+                    <h3>Followers</h3>
+                    <p class="follower_count">200</p>
+                </div>
+                <div class="followings">
+                    <h3>Followings</h3>
+                    <p class="following_count">30</p>
+                </div>
+            </div>
+            <!-- contacts -->
+            <div class="social-info">
+                <div class="location links">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3 class="locationName">San Fransico</h3>
+                </div>
+                <div class="twitter links">
+                    <i class="fab fa-twitter"></i>
+                    <h3 class="twitterName">Not Available</h3>
+                </div>
+                <div class="website links">
+                    <i class="fas fa-link"></i>
+                    <h3 class="websiteName">Github.com</h3>
+                </div>
+                <div class="company links">
+                    <i class="fas fa-building"></i>
+                    <h3 class="companyName">Github Core</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
